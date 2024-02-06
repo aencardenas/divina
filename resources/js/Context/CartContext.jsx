@@ -50,7 +50,7 @@ export const CartProvider = ({ children }) => {
 
     // Calculamos el total del carrito
     const getTotal = () => {
-        return cart.reduce((total, product) => total + product.price * product.quantity, 0);
+        return cart.reduce((total, product) => total + product.price.price * product.quantity, 0);
     };
 
     return (

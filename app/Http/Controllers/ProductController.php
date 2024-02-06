@@ -15,15 +15,12 @@ class ProductController extends Controller
 
         $categories = Category::all();
         $families = Family::all();
-        $products = Product::all();
+        $products = Product::with('price')->get();
 
         return Inertia::render('Products', [
             'categories' => $categories,
             'families' => $families,
             'products' => $products,
         ]);
-
     }
-    
-
 }

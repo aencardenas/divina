@@ -40,7 +40,7 @@ export default function ProductCard({ product, handleToggleOrder }) {
                         <div className="text-xs line-clamp-2 overflow-hidden text-[#00000080] font-medium">{product.description}</div>
                     </div>
                     <div className="flex justify-between items-end">
-                        <p className="font-bold text-black">MXN 100.00</p>
+                        <p className="font-bold text-black">MXN {parseFloat(product.price.price).toFixed(2)}</p>
                         <FaPlusSquare onClick={toggleModal} className="w-8 h-8 text-[#AD9C4D] cursor-pointer" />
                     </div>
                 </div>
@@ -60,7 +60,7 @@ export default function ProductCard({ product, handleToggleOrder }) {
                         />
                         <h2 className="text-black text-xl font-bold">{product.product}</h2>
                         <p className="text-sm text-gray-500">{product.description}</p>
-                        <p className="font-bold text-black">MXN 100.00</p>
+                        <p className="font-bold text-black">MXN {product.price.price}</p>
 
                         {/* Sticky Container */}
                         <div className="sticky bottom-0 bg-white w-full py-3 px-1 flex justify-between items-center border-t border-gray-200">

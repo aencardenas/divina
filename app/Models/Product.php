@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Category;
 use App\Models\Family;
 use App\Models\Group;
+use App\Models\Price;
 
 class Product extends Model
 {
@@ -27,6 +28,11 @@ class Product extends Model
     public function group()
     {
         return $this->belongsTo(Group::class);
-    } 
+    }
+
+    public function price()
+    {
+        return $this->hasOne(Price::class);
+    }
 
 }

@@ -23,7 +23,7 @@ class CategoryController extends Controller
     public function index()
     {
 
-        // Use the CategoryService to gel all categories
+        // Use the CategoryService to get all categories
         $categories = $this->categoryService->getAllCategories();
 
         // Render the Products view with the obtained categories

@@ -15,7 +15,7 @@ export default function CartHeader() {
             </Link>
             <div className="text-white">
                 <p>Su carrito: </p>
-                <p className="font-bold">MXN {getTotal()}</p>
+                <p className="font-bold">MXN {parseFloat(getTotal()).toFixed(2)}</p>
             </div>
 
         </header>

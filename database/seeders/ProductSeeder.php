@@ -263,8 +263,6 @@ class ProductSeeder extends Seeder
 
         Product::create(['product' => 'Pierna Nicaraguense (Kilo)', 'description' => 'Se prepara con una pierna de cerdo sazonada con una mezcla de especias locales y condimentos como ajo, comino, orégano y jugos cítricos como naranja agria o limón, que aportan un sabor único y vibrante.', 'image' => '/img/crispy-onion-rings.webp', 'category_id' => 1, 'family_id' => 7, 'group_id' => 7]);
 
-        Product::create(['product' => 'Pierna Nicaraguense (Kilo)', 'description' => 'Se prepara con una pierna de cerdo sazonada con una mezcla de especias locales y condimentos como ajo, comino, orégano y jugos cítricos como naranja agria o limón, que aportan un sabor único y vibrante.', 'image' => '/img/crispy-onion-rings.webp', 'category_id' => 1, 'family_id' => 7, 'group_id' => 7]);
-
         // ------------------------------ MASCOTAS -------------------------
 
         // PASTEL

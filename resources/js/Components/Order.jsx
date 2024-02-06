@@ -18,7 +18,7 @@ export default function Order() {
         <section className="w-full flex flex-row justify-between items-center py-4 px-8 box-border sticky z-50 bottom-0 bg-white bg-opacity-90 border-t border-solid border-[#ccc]">
             <div className="flex flex-col flex-1 gap-1">
                 <p className="text-xs text-black font-medium">{getTotalQuantity()} {getProducWord()}</p>
-                <p className="text-xl font-bold text-black">MXN {getTotal()}</p>
+                <p className="text-xl font-bold text-black">MXN {parseFloat(getTotal()).toFixed(2)}</p>
             </div>
             <Link
                 href="/cart"

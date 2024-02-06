@@ -29,7 +29,7 @@ export default function CartProductCard({ product }) {
             <div className="flex flex-col justify-between text-xs min-w-40 max-w-40">
                 <div className="flex flex-col gap-1">
                     <div className="text-base text-black">{product.product}</div>
-                    <p className="font-bold text-black">MXN 100.00</p>
+                    <p className="font-bold text-black">MXN {parseFloat(product.price.price).toFixed(2)}</p>
                 </div>
             </div>
             <div className="flex items-center gap-4 text-[#AD9C4D]">
