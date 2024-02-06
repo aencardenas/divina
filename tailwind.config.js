@@ -12,13 +12,14 @@ export default {
 
     theme: {
         screens: {
+            'xs': '500px',
             'sm': '800px',
             'md': '960px',
             'lg': '1100px',
         },
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
             },
         },
     },

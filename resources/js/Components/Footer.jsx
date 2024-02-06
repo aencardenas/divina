@@ -40,7 +40,7 @@ export default function Footer() {
         }
     }
     return (
-        <footer className="flex flex-col text-sm gap-3 items-center text-center lg:flex-row-reverse lg:whitespace-nowrap">
+        <footer className="flex flex-col gap-3 items-center text-center lg:flex-row-reverse lg:whitespace-nowrap text-base">
             <div className="w-full lg:flex lg:justify-end lg:gap-6">
                 <div className="pt-3 pb-3 hover:bg-[#d3d3d3] hover:duration-300 cursor-pointer border-b border-t border-[#17263414] lg:border-none">
                     <p>{getFooterInfo()}</p>

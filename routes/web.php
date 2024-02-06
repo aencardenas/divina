@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -22,11 +24,14 @@ Route::get('/', function (){
     ]);
 });
 
-Route::get('/products', function () {
-    return Inertia::render('Products', [
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+Route::get('/cart', function(){
+    return Inertia::render('Cart', [
 
     ]);
 });
+
 
 Route::get('/larvel', function () {
     return Inertia::render('Welcome', [
