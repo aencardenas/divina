@@ -1,8 +1,9 @@
 import { FaPlusSquare, FaMinusSquare, FaTimesCircle} from "react-icons/fa";
+import VariationMenu from "./VariationMenu";
 import { useCart } from "@/Context/CartContext";
 import { useState } from "react";
 
-export default function ProductCard({ product, handleToggleOrder }) {
+export default function ProductCard({ product, variationNames, handleToggleOrder }) {
 
     const { addToCart } = useCart();
     const [quantity, setQuantity] = useState(1);
@@ -50,7 +51,7 @@ export default function ProductCard({ product, handleToggleOrder }) {
                 <div className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="flex flex-col gap-3 bg-white rounded-lg p-6 w-screen h-screen  overflow-y-auto sm:w-1/2">
 
-                        <FaTimesCircle onClick={toggleModal} className="text-2xl self-end text-[#AD9C4D] cursor-pointer" />
+                        <div><FaTimesCircle onClick={toggleModal} className="text-2xl self-end text-[#AD9C4D] cursor-pointer" /></div>
 
                         {/* Modal Content*/}
                         <img
@@ -61,6 +62,8 @@ export default function ProductCard({ product, handleToggleOrder }) {
                         <h2 className="text-black text-xl font-bold">{product.product}</h2>
                         <p className="text-sm text-gray-500">{product.description}</p>
                         <p className="font-bold text-black">MXN {product.price.price}</p>
+                        <VariationMenu product={product} variationNames={variationNames}/>
+                        
 
                         {/* Sticky Container */}
                         <div className="sticky bottom-0 bg-white w-full py-3 px-1 flex justify-between items-center border-t border-gray-200">

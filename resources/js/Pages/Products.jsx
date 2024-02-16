@@ -7,7 +7,7 @@ import Footer from "@/Components/Footer";
 import { useCart } from "@/Context/CartContext";
 import { useEffect, useState } from "react";
 
-export default function Products({ categories, families, products }) {
+export default function Products({ categories, families, products, variationNames }) {
 
     const [selectedCategoryId, setSelectedCategoryId] = useState(1);
 
@@ -32,6 +32,9 @@ export default function Products({ categories, families, products }) {
         setShowOrder(quantity > 0); // Mostrar la orden si la cantidad total es mayor que 0
     }, [getTotalQuantity]);
 
+    console.log(variationNames)
+    console.log(products)
+
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -39,7 +42,7 @@ export default function Products({ categories, families, products }) {
             <div className="flex flex-col gap-6 mx-5">
                 <Banner />
                 <CategorySlider categories={categories} onSelectCategory={handleCategorySelect} selectedCategoryId={selectedCategoryId} />
-                <ProductBoard families={filteredFamilies} products={filteredProducts} handleToggleOrder={handleToggleOrder} />
+                <ProductBoard families={filteredFamilies} products={filteredProducts} handleToggleOrder={handleToggleOrder} variationNames={variationNames}/>
             </div>
             {(showOrder) && <Order />}
             <div className="lg:mx-6 mt-auto">

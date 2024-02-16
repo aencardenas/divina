@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Family;
 use App\Models\Group;
 use App\Models\Price;
+use App\Models\Topping;
 
 class Product extends Model
 {
@@ -33,6 +34,11 @@ class Product extends Model
     public function price()
     {
         return $this->hasOne(Price::class);
+    }
+
+    public function toppings()
+    {
+        return $this->belongsToMany(Topping::class, 'product_topping');
     }
 
 }

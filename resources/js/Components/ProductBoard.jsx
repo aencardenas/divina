@@ -2,7 +2,7 @@
 import React, { useDebugValue, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 
-export default function ProductBoard({ families, products, handleToggleOrder }) {
+export default function ProductBoard({ families, products, variationNames, handleToggleOrder }) {
   const [expandedFamilies, setExpandedFamilies] = useState([]);
 
   const toggleFamilyExpansion = (familyId) => {
@@ -52,7 +52,7 @@ export default function ProductBoard({ families, products, handleToggleOrder }) 
                 {products
                   .filter((product) => product.family_id === family.id)
                   .map((product) => (
-                    <ProductCard key={product.id} product={product} handleToggleOrder={handleToggleOrder} />
+                    <ProductCard key={product.id} product={product} variationNames={variationNames} handleToggleOrder={handleToggleOrder} />
                   ))}
               </div>
             )}
